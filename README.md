@@ -2,24 +2,19 @@
 
 ## Problem to Solve 
 
-Consider the following grammar, which is the same as the one given on page 175 of the textbook, with the exception of the first rule. The first rule, <assign> is added for assignment statements. <assign> will be the starting symbol of your grammar. 
+Given the following grammar.
 ```
 <assign> → id = <expr> 
 <expr> → <term> {(+ | -) <term>} 
 <term> → <factor> {(* | /) <factor>} 
 <factor> → id | int_constant | ( <expr> )
 ```
-The respective parser program modules for all the rules, except for the assignment statement, are given on pages 175-178 of the textbook. You will have to add a module for the assignment statement.
+Implement the recursive-descent parser program in Java.
 
-Convert the recursive-descent parser program given on pages 175-178 of the textbook to Java and modify it to parse assignment statements.
-
-Your program must be well written and formatted.
 
 ## Lexical Analyzer
 
-You may use your own lexical analyzer to read the actual statements to be parsed from a file called sourceStatements.txt. Your lexical analyzer must then generate the appropriate tokens for the parser.
-
-If your lexical analyzer is not functioning well, in the Parse class, write a method, lex(), which inputs the already generated tokens from the statements.txt file described below and passes them to the parser. The method lex() must read and display the lines, which start with the phrase “Parsing the statement:”. In other words, the only elements which will be sent to the parser will be the tokens, not the source statements.
+You may implement lexical analyzer to read the actual statements to be parsed from a file. Your lexical analyzer must then generate the appropriate tokens for the parser.
 
 ## Input
 
