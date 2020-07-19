@@ -3,12 +3,12 @@
 ## Problem to Solve 
 
 Consider the following grammar, which is the same as the one given on page 175 of the textbook, with the exception of the first rule. The first rule, <assign> is added for assignment statements. <assign> will be the starting symbol of your grammar. 
-
-- <assign> → id = <expr> 
-- <expr> → <term> {(+ | -) <term>} 
-- <term> → <factor> {(* | /) <factor>} 
-- <factor> → id | int_constant | ( <expr> )
-
+```
+<assign> → id = <expr> 
+<expr> → <term> {(+ | -) <term>} 
+<term> → <factor> {(* | /) <factor>} 
+<factor> → id | int_constant | ( <expr> )
+```
 The respective parser program modules for all the rules, except for the assignment statement, are given on pages 175-178 of the textbook. You will have to add a module for the assignment statement.
 
 Convert the recursive-descent parser program given on pages 175-178 of the textbook to Java and modify it to parse assignment statements.
@@ -25,9 +25,10 @@ If your lexical analyzer is not functioning well, in the Parse class, write a me
 
 Test the parser using the supplied text file, which is called statements.txt. 
 
-##. output 
+## output 
 
 The output of your parser ought to be similar to the sample output below.
+```
 Parsing the statement: sumTotal = (sum + 47 ) / total
 Next token is: IDENT
 Enter <assign>
@@ -59,3 +60,4 @@ Exit <term>
 Exit <expr>
 Exit <assign>
 END_OF_FILE
+```
